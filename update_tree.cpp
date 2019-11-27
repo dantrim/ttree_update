@@ -44,6 +44,5 @@ int main()
     tree->Write("", TObject::kOverwrite);
     rfile->Close();
 
-    delete new_branch;
     return 0;
 }

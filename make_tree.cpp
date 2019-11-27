@@ -33,6 +33,5 @@ int main()
     tree->Write();
     rfile->Close();
 
-    delete tree;
     return 0;
 }
