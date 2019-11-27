@@ -5,7 +5,7 @@ Because you'd be surprised how not straightforward this is...
 
 Compile `make_tree.cpp`,
 ```bash
-g++ -o run make_tree.cpp `root-config --cflags --libs`,
+g++ -o run make_tree.cpp `root-config --cflags --libs`
 ./run
 ```
 and execute,
@@ -56,7 +56,7 @@ The variables have the same value for each event: `var0 = 2`, `var1 = 2`, and `v
 
 Compile the code,
 ```bash
-g++ -o update_tree update_tree.cpp `root-config --cflags --libs`,
+g++ -o update_tree update_tree.cpp `root-config --cflags --libs`
 ```
 and execute in the directory containing the output ROOT file from before,
 ```bash
