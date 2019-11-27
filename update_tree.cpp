@@ -34,7 +34,14 @@ int main()
     } // ievent
 
     tree->SetBranchStatus("*",1);
-    tree->AutoSave();
+
+    // calling tree->AutoSave() seems to have the same behavior as
+    // tree->Write("", TObject::kOverwrite), i.e. that there are no
+    // new cycles (mytree;2, mytree;1, etc...) appearing in the output file
+    // c.f. https://root.cern.ch/doc/master/classTTree.html#addcoltoexistingtree
+
+    //tree->AutoSave();
+    tree->Write("", TObject::kOverwrite);
     rfile->Close();
 
     return 0;
